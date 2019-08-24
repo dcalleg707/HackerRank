@@ -1,0 +1,19 @@
+arr = []
+arr2 = []
+sol = []
+for _ in range(int(input())):
+    name = input()
+    score = float(input())
+    arr.append([name, score])
+    arr2.append(score)
+arr2.sort()
+menor = min(arr2)
+while menor in arr2:
+    arr2.remove(menor)
+menor = min(arr2)
+for i in arr:
+    if i[1] == menor:
+        sol.append(i[0])
+sol.sort()
+for i in sol:
+    print(i)
