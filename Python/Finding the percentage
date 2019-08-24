@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    n = int(raw_input())
+    student_marks = {}
+    for _ in range(n):
+        line = raw_input().split()
+        name, scores = line[0], line[1:]
+        scores = map(float, scores)
+        student_marks[name] = scores
+    query_name = raw_input()
+a = 0
+for i in range(3):
+    a += student_marks[query_name][i]
+a = (a/3)*100
+if a >= 1000:
+    a = str(a)
+    print(a[0:2] + "." + a[2:4])
+else:
+    a = str(a)
+    print(a[0:1] + "." + a[1:3])
