@@ -1,0 +1,10 @@
+if __name__ == '__main__':
+    s = input()
+    a = ["alnum()","alpha()","digit()","lower()","upper()"]
+    for j in range(5):
+        b = False
+        for i in s.strip():
+            if eval("i.is"+a[j]):
+                b = True
+                break
+        print(b)
