@@ -1,0 +1,7 @@
+def print_formatted(number):
+    for i in range(1,number+1):
+        print("{0:{l}d} {0:{l}o} {0:{l}X} {0:{l}b}".format(i, l = len(bin(number))-2))
+
+if __name__ == '__main__':
+    n = int(raw_input())
+    print_formatted(n)
