@@ -5,3 +5,10 @@ def print_rangoli(size):
     a = list(map(chr, list(range(97,97+size))))
     patron = [(("-".join(a[len(a)-1:len(a)-i-1:-1]+a[len(a)-i-1:]))).center((size-1)*4+1, "-") for i in range(size-1)]
     print("\n".join(patron) +"\n" + "-".join(a[::-1] + a[1:]) + "\n"+"\n".join(patron[::-1]))
+
+
+
+
+if __name__ == '__main__':
+    n = int(raw_input())
+    print_rangoli(n)
