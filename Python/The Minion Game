@@ -1,0 +1,20 @@
+def minion_game(pal):
+    Stuart = 0
+    Kevin = 0
+    vocals = ["A","E","I","O","U"]
+    for i in range(len(pal)):
+        if pal[i] in vocals:
+            Kevin += len(pal)-i
+        else:
+            Stuart += len(pal)-i
+    if Kevin > Stuart:
+        print("Kevin " + str(Kevin))
+    elif Kevin == Stuart:
+        print("Draw")
+    else:
+        print("Stuart " + str(Stuart))
+    
+
+if __name__ == '__main__':
+    s = raw_input()
+    minion_game(s)
