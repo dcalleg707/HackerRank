@@ -1,0 +1,36 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main() {
+    int arrays; 
+    int req;
+    vector <vector <int>> all;
+    cin >> arrays;
+    cin >> req;
+    int l;
+    vector <int> temp;
+    for(int j = 0; j < arrays; j++)
+    {
+        cin >> l;  
+        int a;
+        for(int i= 0; i < l; i++)
+        {
+            cin >> a;
+            temp.push_back(a);
+
+        }
+        all.push_back(temp);
+        temp.clear();
+    }
+        for(int i = 0; i < req; i++)
+        {
+            int h, j;
+            cin >> h;
+            cin >> j;
+            cout << all[h][j] << endl;
+        }
+    return 0;
+}
