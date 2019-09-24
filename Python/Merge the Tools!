@@ -1,0 +1,9 @@
+def merge_the_tools(string, k):
+    x = len(string) / k
+    for i in range(x):
+        f = []
+        [f.append(j) for j in list(string)[k*i:k*(i+1)] if j not in f]
+        print("".join(f))
+if __name__ == '__main__':
+    string, k = raw_input(), int(raw_input())
+    merge_the_tools(string, k)
